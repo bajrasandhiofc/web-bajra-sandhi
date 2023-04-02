@@ -18,13 +18,13 @@ body {
 /* NAVIGATION BAR */
 nav {
     background-color: rgb(190, 0, 0);
-    background-image: linear-gradient(red, black);
+    background-image: linear-gradient(red, rgb(60, 0, 0));
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100px;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 nav .logo {
@@ -47,7 +47,7 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -57,14 +57,14 @@ nav ul li a {
 
 /* HEADER */
 header {
-    height: 720px;
+    height: 700px;
     padding: 20px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-image: url('./asset/monumen-bajra-sandhi.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center left;
 }
 
 header .right img {
@@ -93,13 +93,19 @@ header .left h1 {
 /* MAIN */
 main {
     margin: 0 auto;
-    padding: 40px 0;
-    min-width: none;
     max-width: 90vw;
+}
+
+main section {
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+
+main section h1 {
+    font-weight: 600;
 }
 
 main article {
@@ -107,12 +113,12 @@ main article {
 }
 
 main h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 main p {
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
 }
 
