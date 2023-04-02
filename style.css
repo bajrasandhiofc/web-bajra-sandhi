@@ -15,79 +15,104 @@ body {
     color:#000;
 }
 
+.aksara {
+    margin: 0;
+    color: white;
+    font-family: "AksaraBali";
+    font-size: 18px;
+}
+
 /* NAVIGATION BAR */
 nav {
-    background-color: rgb(190, 0, 0);
-    background-image: linear-gradient(red, rgb(60, 0, 0));
+    background-image: linear-gradient(red, rgb(100, 0, 0));
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
-    padding: 0 30px;
+    padding: 20px 30px;
 }
 
 nav .logo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-nav .logo img {
-    width: 70px;
+    align-items: left;
 }
 
 nav .logo h1 {
+    margin: 0;
     font-weight: 500;
 }
 
 nav ul {
+    width: 400px;
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
 }
 
 nav ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
+    font-weight: 500;
 }
 
 /* HEADER */
+@keyframes blink-text {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
 header {
-    height: 700px;
-    padding: 20px 20px;
+    height: 900px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background-image: url('./asset/monumen-bajra-sandhi.jpg');
     background-size: cover;
     background-position: center left;
 }
 
-header .right img {
-    width: 300px;
+header aside {
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-header .left {
-    width: 800px;
+header aside .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-header .left p {
+header aside .logo img {
+    height: 130px;
+}
+
+header aside .ucapan {
+    padding: 90px 0;
+    text-align: center;
+}
+
+header aside .ucapan h1 {
     margin: 0;
+    font-size: 50px;
     color: white;
-    font-family: "AksaraBali";
-    font-size: 30px;
-    text-shadow: 0 0 12px black;
+    text-shadow: 0 0 5px black;
+    font-weight: 800;
+    animation: blink-text 5s linear forwards;
+    opacity: 0;
 }
 
-header .left h1 {
-    margin: 20px 0;
-    color: white;
-    font-size: 30px;
-    text-shadow: 0 0 12px black;
+header aside .ucapan .aksara {
+    font-weight: normal;
+}
+
+header aside .ucapan h1:hover {
+    cursor: default;
 }
 
 /* MAIN */
@@ -96,7 +121,7 @@ main {
     max-width: 90vw;
 }
 
-main section {
+main .pengenalan {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
@@ -104,29 +129,102 @@ main section {
     justify-content: space-evenly;
 }
 
-main section h1 {
-    font-weight: 600;
+main .pengenalan h1 {
+    font-weight: 500;
 }
 
-main article {
+main .pengenalan article {
     width: 100%;
 }
 
-main h2 {
+main .pengenalan article h2 {
     font-size: 20px;
     font-weight: 500;
 }
 
-main p {
+main .pengenalan article p {
     font-size: 16px;
     text-align: justify;
 }
 
-/* Footer */
+main .koleksi {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .koleksi h1 {
+    font-weight: 600;
+}
+
+main .koleksi article {
+    width: 100%;
+}
+
+main .koleksi article h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+main .koleksi article p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+main .koleksi article article {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+main .koleksi article article h1 {
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+}
+
+main .koleksi article article .card {
+    padding: 20px;
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+main .koleksi article article .card a {
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: black;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+main .koleksi article article .card a img {
+    width: 200px;
+    height: 200px;
+    object-fit: none;
+    object-position: top;
+}
+
+main .koleksi article article .card a h2 {
+    font-weight: 500;
+}
+
+/* FOOTER */
 footer {
-    height: 60px;
-    background-color: #0a0a0a;
-    color: #979797;
+    height: 90px;
+    background-image: linear-gradient(rgb(100, 0, 0), red);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
