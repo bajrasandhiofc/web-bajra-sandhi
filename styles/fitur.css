@@ -25,22 +25,15 @@ nav {
     padding: 20px 30px;
 }
 
-nav .logo {
+nav .identitas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
 }
 
-nav .logo p {
-    margin: 0;
-    color: white;
-    font-family: "AksaraBali";
-    font-size: 18px;
-}
-
-nav .logo h1 {
-    margin: 0;
+nav .identitas p {
+    margin: 2px 0;
     font-weight: 500;
 }
 
@@ -124,4 +117,49 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+    nav .identitas p {
+        font-size: 16px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+    
+    header aside .ucapan h1 {
+        font-size: 32px;
+    }
+
+    header aside .ucapan .aksara {
+        font-size: 32px;
+    }
+
+    header aside .ucapan .english {
+        font-size: 32px;
+    }
+}
+  
+@media only screen and (max-width: 600px) {
+    nav .identitas p {
+        font-size: 12px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+    
+    header aside .ucapan h1 {
+        font-size: 26px;
+    }
+
+    header aside .ucapan .aksara {
+        font-size: 26px;
+    }
+
+    header aside .ucapan .english {
+        font-size: 26px;
+    }
 }

@@ -32,15 +32,15 @@ nav {
     padding: 20px 30px;
 }
 
-nav .logo {
+nav .identitas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
 }
 
-nav .logo h1 {
-    margin: 0;
+nav .identitas p {
+    margin: 2px 0;
     font-weight: 500;
 }
 
@@ -61,31 +61,29 @@ nav ul li a {
 }
 
 /* HEADER */
-@keyframes blink-text {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 1; }
-}
-
 header {
     height: 900px;
     display: flex;
     background-image: url('./asset/monumen-bajra-sandhi.jpg');
     background-size: cover;
-    background-position: center left;
+    background-position: center top 500%;
 }
 
 header aside {
     width: 100%;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 header aside .logo {
+    width: 90%;
+    padding: 12px 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
 }
 
 header aside .logo img {
@@ -93,26 +91,29 @@ header aside .logo img {
 }
 
 header aside .ucapan {
-    padding: 90px 0;
-    text-align: center;
+    width: 100%;
+    border-top: 2px solid rgb(100, 0, 0);
+    background-image: linear-gradient(red, rgb(100, 0, 0));
 }
 
 header aside .ucapan h1 {
-    margin: 0;
-    font-size: 50px;
+    margin: 20px 0 0 40px;
+    font-size: 46px;
     color: white;
-    text-shadow: 0 0 5px black;
-    font-weight: 800;
-    animation: blink-text 5s linear forwards;
-    opacity: 0;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+    font-weight: 700;
 }
 
 header aside .ucapan .aksara {
-    font-weight: normal;
+    font-weight: 200;
 }
 
-header aside .ucapan h1:hover {
-    cursor: default;
+header aside .ucapan .english {
+    color: black;
+    margin-bottom: 40px;
+    font-size: 38px;
+    font-style: italic;
+    text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff, 0px 1px 0 #fff, 0px -1px 0 #fff, -1px 0px 0 #fff, 1px 0px 0 #fff, 2px 2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, -2px -2px 0 #fff, 0px 2px 0 #fff, 0px -2px 0 #fff, -2px 0px 0 #fff, 2px 0px 0 #fff, 1px 2px 0 #fff, -1px 2px 0 #fff, 1px -2px 0 #fff, -1px -2px 0 #fff, 2px 1px 0 #fff, -2px 1px 0 #fff, 2px -1px 0 #fff, -2px -1px 0 #fff;
 }
 
 /* MAIN */
@@ -228,4 +229,49 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+    nav .identitas p {
+        font-size: 16px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+    
+    header aside .ucapan h1 {
+        font-size: 32px;
+    }
+
+    header aside .ucapan .aksara {
+        font-size: 32px;
+    }
+
+    header aside .ucapan .english {
+        font-size: 32px;
+    }
+}
+  
+@media only screen and (max-width: 600px) {
+    nav .identitas p {
+        font-size: 12px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+    
+    header aside .ucapan h1 {
+        font-size: 26px;
+    }
+
+    header aside .ucapan .aksara {
+        font-size: 26px;
+    }
+
+    header aside .ucapan .english {
+        font-size: 26px;
+    }
 }
