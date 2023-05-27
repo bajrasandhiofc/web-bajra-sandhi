@@ -62,23 +62,24 @@ nav ul li a {
 
 /* HEADER */
 header {
-    height: 900px;
     display: flex;
-    background-image: url('./asset/monumen-bajra-sandhi.jpg');
-    background-size: cover;
-    background-position: center top 500%;
+    flex-direction: column; 
 }
 
-header aside {
+header .background {
     width: 100%;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    background-image: url('./asset/monumen-bajra-sandhi.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-header aside .logo {
+header .background .logo {
     width: 90%;
     padding: 12px 12px;
     display: flex;
@@ -86,17 +87,17 @@ header aside .logo {
     justify-content: space-between;
 }
 
-header aside .logo img {
+header .background .logo img {
     height: 130px;
 }
 
-header aside .ucapan {
+header .ucapan {
     width: 100%;
     border-top: 2px solid rgb(100, 0, 0);
     background-image: linear-gradient(red, rgb(100, 0, 0));
 }
 
-header aside .ucapan h1 {
+header .ucapan h1 {
     margin: 20px 0 0 40px;
     font-size: 46px;
     color: white;
@@ -104,11 +105,11 @@ header aside .ucapan h1 {
     font-weight: 700;
 }
 
-header aside .ucapan .aksara {
+header .ucapan .aksara {
     font-weight: 200;
 }
 
-header aside .ucapan .english {
+header .ucapan .english {
     color: black;
     margin-bottom: 40px;
     font-size: 38px;
@@ -241,15 +242,15 @@ footer {
         font-size: 16px;
     }
     
-    header aside .ucapan h1 {
+    header .ucapan h1 {
         font-size: 32px;
     }
 
-    header aside .ucapan .aksara {
+    header .ucapan .aksara {
         font-size: 32px;
     }
 
-    header aside .ucapan .english {
+    header .ucapan .english {
         font-size: 32px;
     }
 }
@@ -263,15 +264,15 @@ footer {
         font-size: 12px;
     }
     
-    header aside .ucapan h1 {
+    header .ucapan h1 {
         font-size: 26px;
     }
 
-    header aside .ucapan .aksara {
+    header .ucapan .aksara {
         font-size: 26px;
     }
 
-    header aside .ucapan .english {
+    header .ucapan .english {
         font-size: 26px;
     }
 }
