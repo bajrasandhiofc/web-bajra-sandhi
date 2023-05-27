@@ -215,7 +215,7 @@ main .koleksi article article .card a img {
     width: 200px;
     height: 200px;
     object-fit: none;
-    object-position: top;
+    object-position: right center;
 }
 
 main .koleksi article article .card a h2 {
